@@ -71,12 +71,7 @@ CREATE TABLE bookings (
     CONSTRAINT chk_dates CHECK (end_date >= start_date)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ============================================
--- Seed Data: Benutzer
--- ============================================
--- Passwörter (alle: "password123"):
--- Admin: admin@example.com / password123
--- Kunden: Verschiedene Test-Accounts
+
 
 INSERT INTO users (username, email, password, role) VALUES
 ('admin', 'admin@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin'),
@@ -208,12 +203,7 @@ BEGIN
 END //
 DELIMITER ;
 
--- ============================================
--- Berechtigungen (optional, für Produktionsumgebung)
--- ============================================
--- CREATE USER 'auto_rental_user'@'localhost' IDENTIFIED BY 'secure_password_here';
--- GRANT SELECT, INSERT, UPDATE, DELETE ON auto_vermietung.* TO 'auto_rental_user'@'localhost';
--- FLUSH PRIVILEGES;
+
 
 -- ============================================
 -- Ende des Schemas
